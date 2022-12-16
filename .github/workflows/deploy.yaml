@@ -21,26 +21,3 @@ jobs:
 
       - name: test_application
         run: docker run -e CI=true youngermm/frontend-app npm test
-
-      # - name: test_output
-      #   run: echo ${{ steps.test_application.outputs.digest }}
-
-      # - run: docker build -t youngermm/multi-client-10-14 ./client
-      # - run: docker build -t youngermm/multi-nginx-10-14 ./nginx
-      # - run: docker build -t youngermm/multi-server-10-14 ./server
-      # - run: docker build -t youngermm/multi-worker-10-14 ./worker
-      # - run: docker push youngermm/multi-client-10-14
-      # - run: docker push youngermm/multi-nginx-10-14
-      # - run: docker push youngermm/multi-server-10-14
-      # - run: docker push youngermm/multi-worker-10-14
-
-      # - name: Generate deployment package
-      # run: zip -r deploy.zip . -x '*.git*'
-
-      # - name: Deploy to GAE
-      # uses: google-github-actions/deploy-appengine@v0.2.0
-      # with:
-      #   deliverables: app.yaml cron.yaml
-      #   version: v1
-      #   project_id: ${{ secrets.GCP_PROJECT }}
-      #   credentials: ${{ secrets.GCP_CREDENTIALS }}

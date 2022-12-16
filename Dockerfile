@@ -18,5 +18,6 @@ RUN npm run build
 # Serve phase
 
 FROM nginx
+EXPOSE 443
 
 COPY --from=builder /home/node/app/build /usr/share/nginx/html
