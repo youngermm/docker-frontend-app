@@ -24,6 +24,7 @@ jobs:
 
   deploy:
     name: deploy_to_render
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
